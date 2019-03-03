@@ -11,6 +11,7 @@ namespace JoyPhotoshop
         static int[] prevPov;
         static int[] currentPov;
 
+        public static Vector2 PrevStickPos { get; private set; }
         public static Vector2 StickPos { get; private set; }
         public static Vector3 Gyro { get; private set; }
 
@@ -77,6 +78,7 @@ namespace JoyPhotoshop
             prevPov = currentPov;
             currentPov = state.GetPointOfView();
 
+            PrevStickPos = StickPos;
             StickPos = new Vector2(ConvertAxisToFloat(state.X), ConvertAxisToFloat(state.Y));
 
             var slider = state.GetSlider();
@@ -88,7 +90,8 @@ namespace JoyPhotoshop
             prevButtons = currentButtons = null;
             prevPov = currentPov = null;
 
-            StickPos = Vector2.Zero;
+            PrevStickPos = StickPos = Vector2.Zero;
+            Gyro = Vector3.Zero;
         }
 
         static float ConvertAxisToFloat(int value)

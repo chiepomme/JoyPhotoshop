@@ -4,17 +4,21 @@ using System.Windows.Forms;
 
 namespace JoyPhotoshop
 {
-    public partial class MainWindow : Form
+    public partial class MainWindow : Form, INotifier
     {
         readonly JoyStickHolder joyStick;
         readonly JoyStickFinder joyStickFinder = new JoyStickFinder();
-        readonly JoyStickInputHandler inputHandler = new JoyStickInputHandler();
+        readonly JoyStickInputHandler inputHandler;
+
+        readonly NotificationWindow notificationWindow;
 
         DateTime lastUpdatedAt = DateTime.Now;
 
         public MainWindow()
         {
             joyStick = new JoyStickHolder(this);
+            inputHandler = new JoyStickInputHandler(this);
+            notificationWindow = new NotificationWindow(this);
 
             InitializeComponent();
             RefreshList();
@@ -31,6 +35,7 @@ namespace JoyPhotoshop
         void OnClosed(object sender, FormClosedEventArgs e)
         {
             joyStick.Dispose();
+            notificationWindow.Dispose();
         }
 
         void RefreshDeviceListClicked(object _, EventArgs __) => RefreshList();
@@ -73,6 +78,11 @@ namespace JoyPhotoshop
                 Input.UpdateState(joyStick.Current.CurrentJoystickState);
                 inputHandler.Handle(deltaSec);
             }
+        }
+
+        public void Notify(string message)
+        {
+            notificationWindow.SetMessageAndShow(message);
         }
     }
 }

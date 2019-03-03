@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoyPhotoshop", "JoyPhotoshop\JoyPhotoshop.csproj", "{8184FCCE-0823-4F1E-91C9-449B4E83C9CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoyPhotoshop.Tests", "JoyPhotoshop.Tests\JoyPhotoshop.Tests.csproj", "{8FD3543C-30EA-4852-B01F-B48B6B8DBDDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8184FCCE-0823-4F1E-91C9-449B4E83C9CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8184FCCE-0823-4F1E-91C9-449B4E83C9CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8184FCCE-0823-4F1E-91C9-449B4E83C9CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FD3543C-30EA-4852-B01F-B48B6B8DBDDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FD3543C-30EA-4852-B01F-B48B6B8DBDDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FD3543C-30EA-4852-B01F-B48B6B8DBDDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FD3543C-30EA-4852-B01F-B48B6B8DBDDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -19,6 +19,8 @@ using System.Runtime.InteropServices;
 // その型の ComVisible 属性を true に設定してください。
 [assembly: ComVisible(false)]
 
+[assembly: InternalsVisibleTo("JoyPhotoshop.Tests")]
+
 // このプロジェクトが COM に公開される場合、次の GUID が typelib の ID になります
 [assembly: Guid("8184fcce-0823-4f1e-91c9-449b4e83c9ca")]
 

@@ -55,21 +55,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Source\JoyStickDescriptor.cs" />
-    <Compile Include="Source\JoyStickFinder.cs" />
-    <Compile Include="Source\JoyStickHolder.cs" />
+    <Compile Include="Source\AnalogAngleSwitch\AnalogAngleSwitch.cs" />
+    <Compile Include="Source\AnalogAngleSwitch\AnalogAngleSwitch.Entry.cs" />
+    <Compile Include="Source\AnalogAngleSwitch\Angle.cs" />
+    <Compile Include="Source\AnalogAngleSwitch\AngleRange.cs" />
+    <Compile Include="Source\AnalogAngleSwitch\DeltaAngle.cs" />
+    <Compile Include="Source\View\INotifier.cs" />
+    <Compile Include="Source\JoyStick\JoyStickDescriptor.cs" />
+    <Compile Include="Source\JoyStick\JoyStickFinder.cs" />
+    <Compile Include="Source\JoyStick\JoyStickHolder.cs" />
     <Compile Include="Source\JoyStickInputHandler.cs" />
-    <Compile Include="Source\MainWindow.cs">
+    <Compile Include="Source\View\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Source\MainWindow.Designer.cs">
+    <Compile Include="Source\View\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Source\Input.cs" />
-    <Compile Include="Source\PInvoke.cs" />
+    <Compile Include="Source\JoyStick\Input.cs" />
+    <Compile Include="Source\AnalogAngleSwitch\MathAngle.cs" />
+    <Compile Include="Source\View\NotificationWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Source\PInvoke\PInvoke.cs" />
     <Compile Include="Source\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Source\MainWindow.resx">
+    <EmbeddedResource Include="Source\View\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

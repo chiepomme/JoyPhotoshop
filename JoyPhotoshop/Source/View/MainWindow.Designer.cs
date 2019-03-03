@@ -67,6 +67,9 @@
             this.ClientSize = new System.Drawing.Size(496, 50);
             this.Controls.Add(this.RefreshListButton);
             this.Controls.Add(this.deviceComboBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainWindow";
             this.Text = "JoyPhotoshop";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OnClosed);
